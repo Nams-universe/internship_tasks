@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>User Profile</h2>
+    <div class="card">        
+        <div id="viewMode">
+            <p><b>Full Name:</b> <span id="firstname"></span></p>
+            <p><b>Age:</b> <span id="age"></span></p>
+            <p><b>Phone:</b> <span id="phone"></span></p>
+            <p><b>Email:</b> <span id="email"></span></p>
+            <p><b>Address:</b> <span id="address"></span></p>
+            <p><b>Pincode:</b> <span id="pincode"></span></p>
+
+            <button onclick="enableEdit()">Update Profile</button>
+            <button onclick="openPasswordModal()">Change Password</button>
+            <button onclick="logout()">Logout</button>
+        </div>
+        
+        <div id="editMode" style="display:none;">
+            <input id="edit-firstname" placeholder="Full Name">
+            <input id="edit-age" placeholder="Age">
+            <input id="edit-phone" placeholder="Phone">
+            <input id="edit-email" placeholder="Email">
+            <input id="edit-address" placeholder="Address">
+            <input id="edit-pincode" placeholder="Pincode">
+            <button onclick="saveChanges()">Update the Changes</button>
+        </div>
+    </div>
+</div>
+
+<div id="passwordModal" class="modal">
+    <div class="modal-content">
+        <h3>Change Password</h3>
+
+        <input type="password" id="newPassword" placeholder="New Password">
+        <input type="password" id="confirmPassword" placeholder="Confirm Password">
+
+        <label>
+            <input type="checkbox" id="confirmCheckbox">
+            I confirm to change my password
+        </label>
+
+        <button onclick="changePassword()">Update Password</button>
+        <button onclick="closePasswordModal()">Cancel</button>
+    </div>
+</div>
+
+<script src="validation.js"></script>
+</body>
+</html>
