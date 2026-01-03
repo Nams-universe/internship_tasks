@@ -40,7 +40,7 @@ if (form) {
       };
 
       localStorage.setItem("userData", JSON.stringify(userData));
-      window.location.href = "login.html";
+      window.location.href = "index.html";
     }
 
     //  LOGIN 
@@ -109,7 +109,7 @@ function getLoginErrors() {
 if (window.location.pathname.includes("dashboard.html")) {
   const user = JSON.parse(localStorage.getItem("userData"));
   if (!user) {
-    window.location.href = "login.html";
+    window.location.href = "index.html";
   } else {
     document.getElementById("firstname").innerText = user.firstname;
     document.getElementById("age").innerText = user.age;
@@ -123,7 +123,7 @@ if (window.location.pathname.includes("dashboard.html")) {
 //  LOGOUT 
 function logout() {
   localStorage.clear();
-  window.location.href = "login.html";
+  window.location.href = "index.html";
 }
 
 //  EDIT PROFILE
